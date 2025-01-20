@@ -1,6 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-//BRUTE FORCE METHOD with time complexity O(nm)
+//BRUTE FORCE METHOD with time complexity O(n*m)
  int stringMatch(string s1, int n,string s2, int m)
  {
  
@@ -28,8 +28,9 @@ using namespace std;
  }
    
 int main()
- {    string s1="abacdabad";
+ {    
+    string s1="abacdabad";
     string s2="abad";
     int n=s1.size(),m=s2.size();
-     cout<<stringMatch(s1,n,s2,m)<<endl;
+    cout<<stringMatch(s1,n,s2,m)<<endl;
 }

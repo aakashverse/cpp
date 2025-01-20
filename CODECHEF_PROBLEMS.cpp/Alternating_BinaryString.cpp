@@ -7,10 +7,9 @@ int main()
     string S;
     cin>>S;
 
-    for(int i=0; i<n; i++)
-    {
-     if(S[i]==S[i-1])
-       count++;
+    for(int i=0; i<n; i++){
+      if(S[i]==S[i-1])
+      count++;
     }
 
     cout<<count;

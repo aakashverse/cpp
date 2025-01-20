@@ -3,7 +3,7 @@ using namespace std;
 
 bool subsetsum(int arr[],int index,int n,int targetSum)
 {
-    if(targetSum==1)
+    if(targetSum==0)
     return 1;
 
     if(index==n||targetSum<0)
@@ -16,7 +16,7 @@ bool subsetsum(int arr[],int index,int n,int targetSum)
 int main()
 {
     int arr[]={2,3,4};
-    int targetSum=9;
+    int targetSum=15;
     
     if (subsetsum(arr,0,3,targetSum))
     cout<<"Subset with given sum exists"<<endl;

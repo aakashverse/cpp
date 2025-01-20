@@ -5,7 +5,7 @@ using namespace std;
 int main(){
     string s="aaaa";
     string t="aaaA";
-    
+     
     transform(s.begin(),s.end(),s.begin(), ::tolower);
     transform(t.begin(),t.end(),t.begin(), ::tolower);
     
