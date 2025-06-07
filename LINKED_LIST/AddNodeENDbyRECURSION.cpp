@@ -27,17 +27,15 @@ Node* CreateLinkedList(int arr[],int index,int size)
     return temp;
 }
 
-int main()
-{
-    Node *Head;
-    Head=NULL;
+int main(){
+  Node *Head;
+  Head=NULL;
 
   int arr[]={2,4,6,8,10};
   Head=CreateLinkedList(arr,0,5);
 
-while(Head)
-{
-  cout<<Head->data<<" ";
-  Head=Head->next;
-}
+  while(Head){
+    cout<<Head->data<<" ";
+    Head=Head->next;
+  }
 }

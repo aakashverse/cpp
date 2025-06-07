@@ -34,18 +34,17 @@ using namespace std;
 // class myComparator{
 // public:   
 //     bool operator()(int a,int b){
-//         return a>b;  // Ascending order
+//         return a>b;  // Descending order
 //     }
 
 // };
 
 /*METHOD-3 LAMBDA EXPRESSIONS*/
-auto myLambda=[](int a,int b){
+auto myLambda=[](int a,int b){ // []-> lambda capture , ()-> Parameters
     return a>b;
 };
 
-void print(vector<int>&v)
-{
+void print(vector<int>&v){
     for(int &x:v)
     cout<<x<<" ";
 }
