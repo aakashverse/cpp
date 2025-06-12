@@ -1,15 +1,14 @@
 #include<iostream>
 using namespace std;
 
-class Node
-{
-    public:
+class Node{
+public:
     int data;
-   Node *next;
-   Node(int value) //constructor
-   {
-    data=value;
-    next=NULL;
+    Node *next;
+
+    Node(int value){ //constructor
+        data=value;
+        next=NULL;
    }
 };
 
