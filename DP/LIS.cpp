@@ -33,7 +33,7 @@ using namespace std;
         return solve(nums,0,-1);
     }*/
 
-// METHOD-2 Bottom up
+// METHOD-2 Bottom up O(n*n)
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
         vector<int>t(n,1);
@@ -56,4 +56,25 @@ using namespace std;
         vector<int>nums = {0,1,0,3,2,3};
         cout<<lengthOfLIS(nums);
 
+    }
+
+    // METHOD-3 PATIENCE SORTING O(n) [better than bottom up]
+    int lengthOfLIS(vector<int>& nums) {
+        int n = nums.size();
+        vector<int>v;
+
+        for(int i=0;i<n;i++){
+
+            auto it = lower_bound(v.begin(),v.end(),nums[i]); // just greater than nums[i]
+            
+            if(it == v.end()){
+                v.push_back(nums[i]); // greatest, so insert it
+            }
+            else{
+                *it = nums[i]; // replace with nums[i]
+            }
+    
+        }
+
+        return v.size(); // LIS
     }
