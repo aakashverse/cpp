@@ -14,7 +14,6 @@ using namespace std;
 
     }
 
-
     int NthRoot(int N,int M){ 
         int l = 1;
         int h = M;
