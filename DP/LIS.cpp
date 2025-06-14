@@ -58,7 +58,7 @@ using namespace std;
 
     }
 
-    // METHOD-3 PATIENCE SORTING O(n) [better than bottom up]
+    // METHOD-3 PATIENCE SORTING O(nlogn) [better than bottom up]
     int lengthOfLIS(vector<int>& nums) {
         int n = nums.size();
         vector<int>v;
