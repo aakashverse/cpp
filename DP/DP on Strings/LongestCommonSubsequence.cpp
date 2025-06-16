@@ -49,5 +49,23 @@ using namespace std;
             }
         }
 
+        string lcs = "";
+        int i=n,j=m;
+        while(i>0 && j>0){
+
+            if(s1[i-1] == s2[j-1]){
+                lcs.push_back(s1[i-1]);
+                i--;   // move diagonally
+                j--;   //  "       "
+            }
+            else{
+                if(t[i-1][j] > t[i][j-1]) i--;
+                else j--;
+            }
+        }
+        
+        reverse(lcs.begin(),lcs.end());
+        cout<<lcs<<endl;
+
         return t[n][m]; 
     }
