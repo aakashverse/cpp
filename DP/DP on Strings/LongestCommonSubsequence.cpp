@@ -48,7 +48,8 @@ using namespace std;
                 t[i][j] = max(t[i-1][j],t[i][j-1]);
             }
         }
-
+        
+        // Print LCS
         string lcs = "";
         int i=n,j=m;
         while(i>0 && j>0){
@@ -65,7 +66,7 @@ using namespace std;
         }
         
         reverse(lcs.begin(),lcs.end());
-        cout<<lcs<<endl;
+        cout<<lcs<<endl;  
 
         return t[n][m]; 
     }
