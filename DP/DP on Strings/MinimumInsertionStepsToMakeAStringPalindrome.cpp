@@ -28,7 +28,7 @@ using namespace std;
 
         return solve(s,0,n-1);
     }
-
+  
 // METHOD-2 Bottom Up(Blueprint)
 // TC: O(n^2) // SC: O(n^2)   
     int minInsertions(string s) {
