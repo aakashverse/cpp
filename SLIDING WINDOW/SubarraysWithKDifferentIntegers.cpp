@@ -34,5 +34,6 @@ public:
     
         return CountAtleast(nums,k) - CountAtleast(nums,k+1);
             //Exact(k) = Atleast(k) - Atleast(k+1)
+            //**This method is used for counting subarrays not lengths, you can count exact k elements substring length directly
     }
 };
