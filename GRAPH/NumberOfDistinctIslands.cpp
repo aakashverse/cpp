@@ -3,12 +3,11 @@ using namespace std;
 
     int row[4] = {-1,1,0,0};
     int col[4] = {0,0,-1,1};
+    int n,m;
     // store the relative coordinates of each cell with respect
     // to the starting point (origin of that island).
 
     vector<pair<int,int>> bfs(int i,int j,vector<vector<int>>&grid,vector<vector<bool>>&visited){
-        int n = grid.size();
-        int m = grid[0].size();
 
         queue<pair<int,int>>q;
         q.push({i,j});
@@ -36,8 +35,8 @@ using namespace std;
     }
 
     int countDistinctIslands(vector<vector<int>> &grid){
-        int n = grid.size();
-        int m = grid[0].size();
+        n = grid.size();
+        m = grid[0].size();
 
         vector<vector<bool>>visited(n,vector<bool>(m,0));
         set<vector<pair<int,int>>>UnqShapes;
